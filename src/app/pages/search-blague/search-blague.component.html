@@ -1,0 +1,18 @@
+
+<div class="container">
+  <h2>Rechercher une blague par ID</h2>
+
+  <input type="number" [(ngModel)]="id" placeholder="Entrez un ID" />
+
+  <button (click)="search()">Rechercher</button>
+
+  <div *ngIf="blague" class="blague-box">
+    <p><strong>ID :</strong> {{ blague.id }}</p>
+    <p><strong>Question :</strong> {{ blague.question }}</p>
+    <p><strong>Réponse :</strong> {{ blague.reponse }}</p>
+  </div>
+
+  <p *ngIf="notFound" style="color:red;">
+    Aucune blague trouvée pour cet ID.
+  </p>
+</div>

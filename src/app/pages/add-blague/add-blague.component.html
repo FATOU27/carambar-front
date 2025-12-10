@@ -1,0 +1,14 @@
+
+<form (ngSubmit)="addBlague()">
+
+  <label>Question :</label>
+  <input type="text" [(ngModel)]="question" name="question" required>
+
+  <label>Réponse :</label>
+  <input type="text" [(ngModel)]="reponse" name="reponse" required>
+
+  <button type="submit">Ajouter</button>
+
+</form>
+
+<p *ngIf="message" class="success">{{ message }}</p>

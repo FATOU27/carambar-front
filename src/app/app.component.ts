@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Blague, BlagueService } from './services/blague.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'carambar-front';
+ blague?:Blague;
+
+ constructor (private blagueService: BlagueService) {}
+ 
+ getBlagueRandom(){
+  this.blagueService.getRandom().subscribe((data)=>{
+this.blague= data;
+  });
+ }
+
 }

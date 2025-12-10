@@ -1,0 +1,14 @@
+<div class="container">
+
+  <button (click)="getBlagueRandom()" class="btn-refresh">
+    Nouvelle blague
+  </button>
+
+  <div *ngIf="blague" class="blague-box">
+    <p>{{ blague.question }}</p>
+    <p><strong>Réponse : </strong>{{ blague.reponse }}</p>
+  </div>
+
+</div>
+
+

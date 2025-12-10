@@ -1,1 +1,30 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+  background-image: url('/assets/carambar.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+.navbar {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 15px;
+  background: #ffcc00;
+}
+
+.navbar a {
+  text-decoration: none;
+  font-size: 18px;
+  padding: 8px 15px;
+  background: white;
+  border-radius: 8px;
+  color: #333;
+  font-weight: bold;
+}
+
+.navbar a:hover {
+  background: #fff4b3;
+}
